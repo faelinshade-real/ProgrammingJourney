@@ -1,0 +1,609 @@
+/* 1. VARIABEL WARNA */
+:root {
+  --hijau: #22c55e;
+  --hijau-gelap: #16a34a;
+  --biru: #3b82f6;
+  --putih: #ffffff;
+  --abu-muda: #f1f5f9;
+  --abu: #94a3b8;
+  --teks: #1e293b;
+  --teks-muted: #64748b;
+}
+
+/* 2. RESET DASAR */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--abu-muda);
+  color: var(--teks);
+  line-height: 1.7;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* 3. KONTAINER */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 4. HEADER */
+header {
+  background: var(--putih);
+  border-bottom: 2px solid var(--hijau);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--hijau-gelap);
+}
+
+nav a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--teks-muted);
+  margin-left: 1.25rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+nav a:hover {
+  color: var(--hijau-gelap);
+  background: #f0fdf4;
+}
+
+/* Halaman aktif — tambahkan class .aktif di nav link */
+nav a.aktif {
+  color: var(--hijau-gelap);
+  background: #dcfce7;
+}
+
+/* 5. HERO (khusus index.html) */
+.hero {
+  background: linear-gradient(135deg, var(--hijau-gelap), var(--biru));
+  color: var(--putih);
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1.75rem;
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Tombol putih */
+.btn {
+  display: inline-block;
+  background: var(--putih);
+  color: var(--hijau-gelap);
+  font-weight: 800;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tombol outline (transparan) */
+.btn-outline {
+  display: inline-block;
+  border: 2px solid var(--putih);
+  color: var(--putih);
+  font-weight: 800;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Kartu menu di hero */
+.hero-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 600px;
+  margin: 3rem auto 0;
+}
+
+.menu-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 1.25rem;
+  color: var(--putih);
+  text-align: left;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.menu-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.menu-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.menu-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+.menu-card span {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+/* 6. JUDUL HALAMAN (semua halaman kecuali index) */
+.page-hero {
+  background: linear-gradient(135deg, var(--hijau-gelap), var(--biru));
+  color: var(--putih);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.page-hero p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* 7. KONTEN UTAMA */
+main {
+  padding: 2.5rem 0 4rem;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  color: var(--teks-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* 8. KARTU KEBIASAAN */
+.habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.habit-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.habit-card label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--putih);
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    transform 0.2s;
+}
+
+.habit-card label:hover {
+  border-color: var(--hijau);
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.habit-card label div {
+  flex: 1;
+}
+.habit-card label strong {
+  display: block;
+  font-size: 0.95rem;
+}
+.habit-card label p {
+  font-size: 0.82rem;
+  color: var(--teks-muted);
+}
+
+.status {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--abu);
+  white-space: nowrap;
+}
+
+/* Efek saat dicentang */
+.habit-card input:checked + label {
+  background: #f0fdf4;
+  border-color: var(--hijau);
+}
+
+.habit-card input:checked + label strong {
+  text-decoration: line-through;
+  color: var(--hijau-gelap);
+}
+
+.habit-card input:checked + label .status {
+  color: var(--hijau-gelap);
+  background: #dcfce7;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  content: "✓ Selesai";
+}
+
+/* 9. PROGRESS BAR */
+.progress-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(90deg, var(--hijau), var(--biru));
+  border-radius: 999px;
+  animation: isi 1.2s ease both;
+}
+
+@keyframes isi {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.progress-bar-wrap span {
+  font-weight: 800;
+  color: var(--hijau-gelap);
+  min-width: 40px;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progress-list li {
+  font-size: 0.9rem;
+  color: var(--teks-muted);
+  padding: 0.7rem 1rem;
+  background: var(--putih);
+  border-radius: 8px;
+  border-left: 4px solid #e2e8f0;
+}
+
+.progress-list li.done {
+  border-left-color: var(--hijau);
+  color: var(--teks);
+}
+
+/* 10. TIPS */
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.tip-card {
+  background: var(--putih);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 2px solid #e2e8f0;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.tip-card:hover {
+  border-color: var(--biru);
+  transform: translateY(-3px);
+}
+
+.tip-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.tip-card h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+.tip-card p {
+  font-size: 0.83rem;
+  color: var(--teks-muted);
+}
+
+/* 11. TENTANG */
+.tentang-card {
+  background: var(--putih);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid #e2e8f0;
+}
+
+.tentang-card p {
+  color: var(--teks-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.tentang-card strong {
+  color: var(--hijau-gelap);
+}
+
+.tentang-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.tentang-card li {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* 12. FOOTER */
+footer {
+  background: #1e293b;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin-bottom: 0.3rem;
+}
+footer strong {
+  color: var(--putih);
+}
+.copy {
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+}
+
+/* 13. RESPONSIF */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  .hero-menu {
+    grid-template-columns: 1fr;
+  }
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  nav a {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.4rem;
+  }
+}
+
+/* 14. KARTU PROFIL (about.html) */
+.profil-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: var(--putih);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+/* Wrapper foto + ring dekoratif */
+.profil-foto-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profil-foto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--hijau);
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+/* Lingkaran hijau pudar di belakang foto */
+.profil-foto-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hijau), var(--biru));
+  opacity: 0.15;
+  z-index: 1;
+}
+
+/* Info teks */
+.profil-info {
+  flex: 1;
+  min-width: 220px;
+}
+
+.profil-badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: var(--hijau-gelap);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.profil-info h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  color: var(--teks);
+}
+
+.profil-sekolah {
+  font-size: 0.85rem;
+  color: var(--teks-muted);
+  margin-bottom: 0.75rem;
+}
+
+.profil-bio {
+  font-size: 0.92rem;
+  color: var(--teks-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Tombol sosial media */
+.profil-sosial {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.sosial-btn {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.sosial-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sosial-btn.ig {
+  background: linear-gradient(135deg, #f97316, #ec4899);
+  color: white;
+}
+
+.sosial-btn.gh {
+  background: #1e293b;
+  color: white;
+}
+
+/* Responsif profil */
+@media (max-width: 600px) {
+  .profil-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profil-sosial {
+    justify-content: center;
+  }
+}
+
+/* 15. LOGO GAMBAR */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+  /* Filter gradient hijau-biru saat hover */
+  filter: drop-shadow(0 2px 6px rgba(34, 197, 94, 0.25));
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.35));
+}

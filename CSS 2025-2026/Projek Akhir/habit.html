@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitKu – Kebiasaan Harian</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-inner">
+        <a href="index.html" class="logo"
+          ><img src="Logo.png" alt="Logo Habitku" class="logo-img"
+        /></a>
+        <nav>
+          <a href="index.html">Beranda</a>
+          <a href="habit.html" class="aktif">Kebiasaan</a>
+          <a href="progres.html">Progres</a>
+          <a href="tips.html">Tips</a>
+          <a href="about.html">Tentang</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- JUDUL HALAMAN -->
+    <div class="page-hero">
+      <h1>✅ Kebiasaan Harianku</h1>
+      <p>Centang kebiasaan yang sudah kamu lakukan hari ini!</p>
+    </div>
+
+    <!-- KONTEN -->
+    <main class="container">
+      <section>
+        <p class="sub">
+          Klik pada kartu untuk menandai kebiasaan sebagai selesai.
+        </p>
+
+        <div class="habit-list">
+          <div class="habit-card">
+            <input type="checkbox" id="air" />
+            <label for="air">
+              <span class="icon">💧</span>
+              <div>
+                <strong>Minum Air Putih</strong>
+                <p>Minimal 8 gelas per hari agar tetap fokus.</p>
+              </div>
+              <span class="status">Belum</span>
+            </label>
+          </div>
+
+          <div class="habit-card">
+            <input type="checkbox" id="belajar" />
+            <label for="belajar">
+              <span class="icon">📚</span>
+              <div>
+                <strong>Belajar Terjadwal</strong>
+                <p>Minimal 2 jam belajar tanpa gangguan HP.</p>
+              </div>
+              <span class="status">Belum</span>
+            </label>
+          </div>
+
+          <div class="habit-card">
+            <input type="checkbox" id="olahraga" />
+            <label for="olahraga">
+              <span class="icon">🏃</span>
+              <div>
+                <strong>Olahraga</strong>
+                <p>30 menit gerak aktif di pagi hari.</p>
+              </div>
+              <span class="status">Belum</span>
+            </label>
+          </div>
+
+          <div class="habit-card">
+            <input type="checkbox" id="tidur" />
+            <label for="tidur">
+              <span class="icon">🌙</span>
+              <div>
+                <strong>Tidur Cukup</strong>
+                <p>Tidur sebelum jam 22.00, minimal 7 jam.</p>
+              </div>
+              <span class="status">Belum</span>
+            </label>
+          </div>
+
+          <div class="habit-card">
+            <input type="checkbox" id="baca" />
+            <label for="baca">
+              <span class="icon">📖</span>
+              <div>
+                <strong>Membaca Buku</strong>
+                <p>Minimal 20 halaman per hari.</p>
+              </div>
+              <span class="status">Belum</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Navigasi ke halaman berikutnya -->
+        <div style="text-align: center; margin-top: 2.5rem">
+          <a
+            href="progres.html"
+            class="btn"
+            style="background: var(--hijau-gelap); color: white"
+          >
+            Lihat Progres →
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        🌿<strong>Habitku</strong> — Dibuat oleh Rizki Muhammad Fadhil untuk
+        Tugas Projek Akhir
+      </p>
+      <p>
+        📧fadhil258729@student.smkn1kandeman.sch.id &nbsp;|&nbsp; 📍 Kandeman,
+        Batang, Jawa Tengah
+      </p>
+      <p class="copy">© 2026 HabitKu · Dibangun hanya dengan HTML & CSS</p>
+    </footer>
+  </body>
+</html>
