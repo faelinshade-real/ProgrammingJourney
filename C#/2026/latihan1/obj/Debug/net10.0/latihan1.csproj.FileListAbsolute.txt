@@ -1,0 +1,15 @@
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\bin\Debug\net10.0\latihan1.exe
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\bin\Debug\net10.0\latihan1.deps.json
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\bin\Debug\net10.0\latihan1.runtimeconfig.json
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\bin\Debug\net10.0\latihan1.dll
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\bin\Debug\net10.0\latihan1.pdb
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.AssemblyInfoInputs.cache
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.AssemblyInfo.cs
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.csproj.CoreCompileInputs.cache
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.sourcelink.json
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.dll
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\refint\latihan1.dll
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.pdb
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\latihan1.genruntimeconfig.cache
+C:\Git Upload\ProgrammingJourney\C#\2026\latihan1\obj\Debug\net10.0\ref\latihan1.dll
